@@ -1,0 +1,58 @@
+.input-content{
+    align-items: center;
+    background-color: $veryLightGrayBg;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1.5rem;
+    padding-top: 2px;  
+    transition: 400ms;
+    width: 32.5rem;
+    margin-bottom: 3rem;
+    transition: .3s ease all;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    & i{
+        color: $darkGrayInput;
+    }
+
+    body.dark &{
+        background-color: $veryLightGrayBg;
+    }
+
+}
+
+.input{
+    color: #07423C; 
+    border: none;
+    background-color: white;
+    outline: none;
+    width: 100%;
+    height: 2.9rem;
+    appearance: none;
+    border-radius: 5px;
+    font-family:$font;
+    caret-color: $darkBlueElement;
+    font-size: 1rem;
+    transition: .3s ease all;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    body.dark &{
+        background-color: $darkBlueElement;
+    }
+
+    &:focus{
+        background-color: white;
+        font-family:$font;
+        font-weight: 400;
+        
+    }
+}
+
+.input-main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}

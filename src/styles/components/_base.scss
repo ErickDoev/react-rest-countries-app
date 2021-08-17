@@ -1,0 +1,27 @@
+body,html{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 0%, 98%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    padding: 3rem 4rem;
+}
+
+$font:'Nunito Sans', sans-serif;
+
+// dark mode
+$darkBlueElement: hsl(209, 23%, 22%);
+$veryDarkBlueBg:hsl(207, 26%, 17%);
+
+//light mode
+$veryDarkBlueText:hsl(200, 15%, 8%);
+$darkGrayInput:hsl(0, 0%, 52%);
+$veryLightGrayBg:hsl(0, 0%, 98%);
+
+//  (Dark Mode Text & Light Mode Elements)
+$white: hsl(0, 0%, 100%);
