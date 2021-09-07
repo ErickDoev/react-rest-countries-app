@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 export const Country = ({history}) => {
     
    
-    const {active,countriesByCode} = useSelector(state => state.country);
+    const {active} = useSelector(state => state.country);
 
 
     const handleBack = () => {
