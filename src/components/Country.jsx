@@ -7,11 +7,9 @@ export const Country = ({history}) => {
     
    
     const {active} = useSelector(state => state.country);
-
-
-    const handleBack = () => {
-        history.push('/countries');
-    }
+    // const handleBack = () => {
+    //     history.push('/countries');
+    // }
     // useEffect(() => {
     //     dispatch(getCountriesByCodes(active.borders.join(';')));
         
@@ -31,7 +29,8 @@ export const Country = ({history}) => {
             <div>
                 <button 
                     className="country__button"
-                    onClick={handleBack}><i className="fas fa-hand-point-left"></i> Back</button>
+                    
+                    ><i className="fas fa-hand-point-left"></i> Back</button>
             </div>
             <div className="country__content">
                 <div className="country__flag">
