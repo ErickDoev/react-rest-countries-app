@@ -10,6 +10,7 @@ export const CountriesList = ({countries}) => {
                 countries && countries.map(c => ( 
                     <CountryItem 
                         key={c.id}
+                        borders={c.borders}
                         id={c.id}
                         name={c.name}
                         nativeName={c.nativeName}

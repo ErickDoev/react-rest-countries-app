@@ -5,6 +5,11 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     gap: 2rem;
+    transition: .3s ease all;
+
+    body.dark &{
+        background-color: $veryDarkBlueBg;
+    }
     
 }
 
@@ -15,14 +20,25 @@
     height: 400px;
     background-color: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: .3s ease all;
+
+    body.dark &{
+        background-color: $darkBlueElement;
+    }
 }
 
 .card__content{
     padding: .5rem;
+    transition: .3s ease all;
 
     &.card__title h3{
         color: red;
     }
+
+    body.dark &{
+        color: $white;
+    }
+    
 }
 
 .card__img{

@@ -9,6 +9,7 @@ export const getCountries = createAsyncThunk(
         const dataFiltered = data.map(c => {
             return{
                 name:c.name,
+                borders:c.borders,
                 nativeName:c.nativeName,
                 population:c.population,
                 region:c.region,
@@ -19,7 +20,8 @@ export const getCountries = createAsyncThunk(
                 languages:c.languages,
                 borderCountries:c.borderCountries,
                 flag:c.flag, 
-                id:c.numericCode
+                id:c.numericCode,
+                code:c.alpha3Code
             }
         });
         dispatch(getAllCountries(dataFiltered));
@@ -46,10 +48,28 @@ export const getCountryByName = createAsyncThunk(
                 languages:c.languages,
                 borderCountries:c.borders,
                 flag:c.flag, 
-                id:c.numericCode
+                id:c.numericCode,
+                code:c.alpha3Code
             }
         });
         return dataFiltered;
+    }
+)
+
+export const getCountriesByCodes = createAsyncThunk(
+    "countries/getCountriesByCode",
+    async (codes,{dispatch}) => {
+        const url = `https://restcountries.eu/rest/v2/alpha?codes=${codes};`;
+        const resp = await fetch(url);
+        const data = await resp.json();
+        const dataFiltered = data.map(e => {
+            return {
+                name:e.name,
+                alphacode:e.alpha3Code
+            }
+        })
+        dispatch(setCountriesByCode(dataFiltered)); 
+        return dataFiltered;  
     }
 )
 
@@ -59,7 +79,8 @@ const initialState = {
     active:null,
     loading:null,
     status:null,
-    countryStatus:null
+    countryStatus:null,
+    countriesByCode: null
 }
 export const countrySlice = createSlice({
     name: 'country',
@@ -86,6 +107,12 @@ export const countrySlice = createSlice({
         },
         setActiveCountry: (state,action) => {
             state.active=action.payload
+        },
+        setCountriesByCode:(state,action) => {
+            state.countriesByCode=action.payload
+        },
+        setActiveCountryByAlphaCode: (state,action) => {
+            state.active = state.data.filter(e => e.code === action.payload )
         }
         
     },
@@ -115,6 +142,6 @@ export const countrySlice = createSlice({
     }
 });
 
-export const {getAllCountries,filterCountries,filterCountriesByName,filterCountriesByRegion,setActiveCountry} = countrySlice.actions;
+export const {setActiveCountryByAlphaCode,setCountriesByCode,getAllCountries,filterCountries,filterCountriesByName,filterCountriesByRegion,setActiveCountry} = countrySlice.actions;
 
 export default countrySlice.reducer;

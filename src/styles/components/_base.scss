@@ -7,11 +7,6 @@ body,html{
     margin: 0;
     padding: 0;
 }
-
-.main{
-    padding: 3rem 4rem;
-}
-
 $font:'Nunito Sans', sans-serif;
 
 // dark mode
@@ -25,3 +20,21 @@ $veryLightGrayBg:hsl(0, 0%, 98%);
 
 //  (Dark Mode Text & Light Mode Elements)
 $white: hsl(0, 0%, 100%);
+
+p{
+    font-family: $font;
+}
+.dark{
+    background-color: $veryDarkBlueBg;
+    
+}
+
+.main{
+    padding: 3rem 4rem;
+    transition: .3s ease all;
+
+    body.dark &{
+        background-color: $veryDarkBlueBg;
+    }
+}
+

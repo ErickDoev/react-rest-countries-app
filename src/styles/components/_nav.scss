@@ -6,10 +6,16 @@ nav{
     padding: 1.5rem 3rem 1.5rem 3rem;
     background-color: $white;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
+    transition: .3s ease all;
+    
     & p{
         font-family: $font;
         font-weight: 800;
         font-size: 2rem;
+    }
+
+    body.dark &{
+        background-color: $darkBlueElement;
+        color: $white;
     }
 }

@@ -1,0 +1,76 @@
+.country__main{
+    width: 100%;
+    body.dark &{
+        background-color: $veryDarkBlueBg;
+    }
+}
+.country__button{
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: 0;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+
+    body.dark &{
+        background-color: $darkBlueElement;
+        color: $white;
+    }
+}
+
+.country__content{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10rem;
+    width: 100%;   
+
+    body.dark &{
+
+        color: $white;
+    }
+    
+}
+
+.country__flag{
+    flex: 1 1 0;
+    overflow: hidden;
+    margin-left: 3rem;
+
+    & img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.country__info{
+    flex: 1 1 0;
+    margin-right: 3rem;
+}
+
+.country__general{
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    margin-bottom: 3rem;
+    & p{
+        margin: 5px;
+    }
+}
+
+// .country__borders{
+    
+// }
+
+.country__name{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    & p{
+        font-size: 2rem;
+        font-weight: 800;
+    }
+}

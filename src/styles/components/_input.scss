@@ -17,7 +17,7 @@
     }
 
     body.dark &{
-        background-color: $veryLightGrayBg;
+        background-color: $darkBlueElement;
     }
 
 }
@@ -41,6 +41,7 @@
 
     body.dark &{
         background-color: $darkBlueElement;
+        color: $white;
     }
 
     &:focus{
@@ -55,4 +56,23 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+}
+
+.input-region{
+    height: 3rem;
+    border: none;
+    background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+
+    &:focus{
+        border: none;
+        
+    }
+
+    body.dark &{
+        background-color: $darkBlueElement;
+        color: $white;
+    }
 }

@@ -47,9 +47,11 @@ export const CountryInput = () => {
                 </div>
                 
                 <select 
+                    className="input-region"
                     name="region" 
                     onChange={handleSelectChange}
                     >
+                        <option selected disabled>Filter by a Region</option>
                         <option value="World">World</option>
                         <option value="Africa">Africa</option>
                         <option value="Americas">America</option>

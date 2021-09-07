@@ -5,7 +5,6 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
     Redirect
   } from "react-router-dom";
 import { CountriesScreen } from '../components/CountriesScreen';
@@ -21,12 +20,16 @@ export const AppRouter = () => {
 
         
     }, [dispatch]);
+
+    const handleChangeMode = () => {
+        document.querySelector('body').classList.toggle('dark');
+    }
     return (
         <div>
             <Router>
                 <nav>
                     <p>Where in the world?</p>
-                    <div>
+                    <div onClick={handleChangeMode}>
                         <span><i className="fas fa-moon"></i> Dark Mode</span>
                     </div>
                 </nav>

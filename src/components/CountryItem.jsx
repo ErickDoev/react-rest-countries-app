@@ -7,6 +7,7 @@ export const CountryItem = (
     {   
         id,
         name,
+        borders,
         nativeName,
         population,
         region,
@@ -25,6 +26,7 @@ export const CountryItem = (
     const handleActiveCountry = () => {
         dispatch(setActiveCountry({id,
             name,
+            borders,
             nativeName,
             population,
             region,
