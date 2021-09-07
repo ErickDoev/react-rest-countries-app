@@ -35,9 +35,9 @@ export const AppRouter = () => {
                 </nav>
 
                 <Switch>
-                    <Route exact path='/' component={CountriesScreen}/>
+                    <Route exact path='/countries' component={CountriesScreen}/>
                     <Route exact path='/country/:id' component={Country}/>
-                    <Redirect to='/'/>
+                    <Redirect to='/countries'/>
                 </Switch>
             </Router>
         </div>

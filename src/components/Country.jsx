@@ -10,14 +10,13 @@ export const Country = ({history}) => {
 
 
     const handleBack = () => {
-        history.push('/');
+        history.push('/countries');
     }
     // useEffect(() => {
     //     dispatch(getCountriesByCodes(active.borders.join(';')));
         
     // }, [active.borders,dispatch]);
 
-    console.log(countriesByCode);
 
     if(!active){
         return <Redirect to='/'/>
