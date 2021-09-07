@@ -50,8 +50,9 @@ export const CountryInput = () => {
                     className="input-region"
                     name="region" 
                     onChange={handleSelectChange}
+                    defaultValue='region'
                     >
-                        <option selected disabled>Filter by a Region</option>
+                        <option value="region" disabled>Filter by a Region</option>
                         <option value="World">World</option>
                         <option value="Africa">Africa</option>
                         <option value="Americas">America</option>

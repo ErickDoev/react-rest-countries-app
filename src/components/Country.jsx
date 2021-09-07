@@ -1,14 +1,13 @@
-import React,{useEffect} from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
-import { getCountriesByCodes, setActiveCountryByAlphaCode } from '../slices/countrySlice';
+import React from 'react'
+import { useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+
 
 export const Country = ({history}) => {
     
    
     const {active,countriesByCode} = useSelector(state => state.country);
-    
-    const dispatch = useDispatch();
+
 
     const handleBack = () => {
         history.push('/');
