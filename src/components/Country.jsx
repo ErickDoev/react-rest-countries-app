@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 
-export const Country = ({history}) => {
+export const Country = () => {
     
    
     const {active} = useSelector(state => state.country);
@@ -16,9 +16,9 @@ export const Country = ({history}) => {
     // }, [active.borders,dispatch]);
 
 
-    if(!active){
-        return <Redirect to='/'/>
-    }
+    // if(!active){
+    //     return <Redirect to='/countries'/>
+    // }
 
     // const setCountryActive = (code) => {
     //     dispatch(setActiveCountryByAlphaCode(code));
